@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lançamento de dados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <form>
+            <!--<label for="jogadas">Insira um número</label>-->
+            <input type="number" id="jogadas" placeholder="Insira um número" max="5000000" " value=" 10">
+            <input type="button" value="Calcular" onclick="calcula()">
+        </form>
+    </div>
+
+    <canvas class="line-chart"></canvas>
+    <script src="Chart.bundle.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
