@@ -3,7 +3,7 @@
 clone para sua maquina e exeucute o index.html
 
 
-**Falta:
+**Falta:**
 
 * limpar o canvas
 * calculo do resultado esperado com base no numero de jogadas
