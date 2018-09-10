@@ -1,7 +1,8 @@
 # probabilidade-dados
 
 clone para sua maquina e exeucute o index.html
-
+ 
+* $ git clone https://github.com/Bobson360/probabilidade-dados.git
 
 **Falta:**
 
