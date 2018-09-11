@@ -10,15 +10,16 @@
 </head>
 
 <body>
-    <div>
+    <div class="form">
         <form>
             <!--<label for="jogadas">Insira um número</label>-->
-            <input type="number" id="jogadas" placeholder="Insira um número" max="5000000" " value=" 10">
+            <input type="number" id="jogadas" placeholder="Insira um número" max="5000000" " value="10">
             <input type="button" value="Calcular" onclick="calcula()">
         </form>
     </div>
-
-    <canvas class="line-chart"></canvas>
+<div width="600" height="600">
+    <canvas class="line-chart" ></canvas>
+</div>
     <script src="Chart.bundle.min.js"></script>
     <script src="index.js"></script>
 </body>

@@ -10,6 +10,8 @@ class Dados {
         this.faces = {}
 
         this.soma = {
+            1:null,
+            2:null,
             3: [],
             4: [],
             5: [],
@@ -50,6 +52,11 @@ class Dados {
     }
 
     somaFaces() { //função está executando antes de ter os valores nos arrays
+
+        for(var i = 3; i <= (Object.getOwnPropertyNames(this.soma).length); i++){
+            this.soma[i].splice(0, this.soma[i].length)
+        }
+
         var soma = 0
         for (let i = 0; i < this.dados.dado1.length; i++) {
             soma = this.dados.dado1[i] + this.dados.dado2[i] + this.dados.dado3[i]
@@ -204,10 +211,12 @@ class Dados {
         this.somaFaces()
     }
 }
+
+
 var dados = new Dados
 
 function calcula() {
-
+    dados.soma[3] = [0]
 
 
     var val = document.getElementById('jogadas').value
@@ -216,7 +225,12 @@ function calcula() {
 
     dados.showSomas()
     console.log(dados.soma[3])
+    
+    
     var ctx = document.getElementsByClassName('line-chart')
+    
+    
+    
 
     var chartGraph = new Chart(ctx, {
         type: 'line',
@@ -250,7 +264,22 @@ function calcula() {
 
                     label: "Esperado",
                     data: [
-                        '3', '4', '5', '6', '8', '10', '15', '17', '18', '18', '17', '15', '10', '8', '6', '5', '4', '3'
+                        val*0.0046, // 0,46%
+                        val*0.0139, // 1,39%
+                        val*0.0278, // 2,78%
+                        val*0.0463, // 4,63%
+                        val*0.0694, // 6,94%
+                        val*0.0972, // 9,72%
+                        val*0.1157, // 11,57%
+                        val*0.1250, // 12,50%
+                        val*0.1250, // 12,50%
+                        val*0.1157, // 11,57%
+                        val*0.0972, // 9,72%
+                        val*0.0694, // 6,94%
+                        val*0.0463, // 4,63%
+                        val*0.0278, // 2,78%
+                        val*0.0139, // 1,39%
+                        val*0.0046, // 0,46%
                     ],
                     borderWidth: 6,
                         borderColor: 'rgba(6,204,6,0.85)',
